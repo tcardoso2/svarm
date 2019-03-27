@@ -1,0 +1,26 @@
+{
+  "name": "svarm",
+  "version": "0.1.0",
+  "description": "One Implementation of vermon-web (svarm is read \"swarm\"), a swarm of vermon-web servers who communicate with each other",
+  "main": "svarmctl.js",
+  "scripts": {
+    "test": "mocha test/ --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcardoso2/svarm.git"
+  },
+  "keywords": [
+    "vermon",
+    "vermon-web",
+    "swarm",
+    "api",
+    "web"
+  ],
+  "author": "Tiago Cardoso <tcardoso@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tcardoso2/svarm/issues"
+  },
+  "homepage": "https://github.com/tcardoso2/svarm#readme"
+}
