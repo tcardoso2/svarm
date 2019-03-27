@@ -1,0 +1,14 @@
+#!/usr/local/bin/node
+
+//###############################################
+//# call this file via: ./bin/server --startweb #
+//###############################################
+
+
+"use strict"
+
+console.log('Vermon web-server, for options type --help')
+
+let vermon = require('vermon')
+let vermon_web = require('vermon-web')
+vermon.use(vermon_web)

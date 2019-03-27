@@ -1,6 +1,6 @@
 {
   "name": "svarm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "One Implementation of vermon-web (svarm is read \"swarm\"), a swarm of vermon-web servers who communicate with each other",
   "main": "svarmctl.js",
   "scripts": {
@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/tcardoso2/svarm/issues"
   },
-  "homepage": "https://github.com/tcardoso2/svarm#readme"
+  "homepage": "https://github.com/tcardoso2/svarm#readme",
+  "dependencies": {
+    "stomp-client": "^0.9.0",
+    "vermon": "^0.7.0",
+    "vermon-web": "^0.5.11"
+  }
 }
