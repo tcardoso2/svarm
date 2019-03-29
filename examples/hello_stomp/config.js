@@ -19,8 +19,7 @@ profiles = {
       },
       queue: '/queue/queue1'
     },
-    //IMPORTANT! This filter must exist to block all signals to propagate from the Detector to the notifier,
-    //Otherwise this setup with be an infinite loop!
+    //IMPORTANT! This filter must exist to block all signals to propagate from the Detector to the Notifiers, otherwise there will be an infinite loop!
     BlockAllFilter: [{}]
   }
 }
