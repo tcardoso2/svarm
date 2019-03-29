@@ -1,7 +1,8 @@
 SVARM
 =====
 
-One Implementation of vermon-web (svarm is read "swarm"), a swarm of vermon-web servers who communicate with each other (e.g. via ActiveMQ).  
+Implementation examples of vermon (svarm is read "swarm"), a swarm of vermon proces who communicate with each other.  
+These examples require an ActiveMQ server to be up. See connection details in each of the examples in the "examples" folder     
 
 - *v0.1.2*:
   - updated to vermon-core-entities v0.5.4, to include Stomp pub-sub
