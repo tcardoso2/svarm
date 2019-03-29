@@ -1,6 +1,6 @@
 {
   "name": "svarm",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "One Implementation of vermon-web (svarm is read \"swarm\"), a swarm of vermon-web servers who communicate with each other",
   "main": "svarmctl.js",
   "scripts": {
@@ -26,6 +26,7 @@
   "dependencies": {
     "stomp-client": "^0.9.0",
     "vermon": "^0.7.0",
+    "vermon-core-entities": "^0.5.5",
     "vermon-web": "^0.5.11"
   }
 }
