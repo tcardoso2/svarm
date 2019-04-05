@@ -22,9 +22,17 @@ after(function (done) {
   done()
 })
 
+describe('stop any forever process first', function () {
+  it('stop', function () {
+    this.timeout(4000)
+    shell.exec('./bin/forever stopall').code.should.equal(0)
+  })
+})
+
 describe('svarmctl --configure', function () {
   it('-c option should point to folder which turns its subfolders into processes', function (done) {
-    shell.exec('./svarmctl.js -c examples').code.should.equal(0)
+    this.timeout(4000)
+    shell.exec('./svarmctl.js -c examples/request_reply').code.should.equal(0)
     let child = shell.exec('./svarmctl.js -l', {async:true})
     let _done = false
     child.stdout.on('data', function(data) {
@@ -47,8 +55,18 @@ describe('svarmctl --configure', function () {
   })
 })
 
-describe('svarmctl start', function () {
-  xit('should contain the subfolder name which contains the main file', function () {
+describe('svarmctl --start', function () {
+  it('should contain the subfolder name which contains the main file', function (done) {
+    this.timeout(10000)
+    let child = shell.exec('./svarmctl.js -s -', {async:true})
+    let _done1 = 0
+    child.stdout.on('data', function(data) {
+      if (data.indexOf('/web/') > 0) _done1++
+      if (data.indexOf('/worker/') > 0) _done1++
+      if (_done1 == 2) {
+        done()
+      }
+    });
     // Prepare
   })
 })
